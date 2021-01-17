@@ -1,0 +1,72 @@
+CREATE TABLE person (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(70),
+    age INTEGER,
+    height INTEGER,
+    city VARCHAR(85),
+    favorite_color VARCHAR(20)
+);
+
+INSERT INTO person
+(name, age, height, city, favorite_color)
+VALUES
+('Aaron', 20, 6, 'Allen', 'Grey');
+
+INSERT INTO person
+(name, age, height, city, favorite_color)
+VALUES
+('Alex', 21, 5, 'Dallas', 'Blue');
+
+INSERT INTO person
+(name, age, height, city, favorite_color)
+VALUES
+('Austin', 22, 6, 'Houston', 'Red');
+
+INSERT INTO person
+(name, age, height, city, favorite_color)
+VALUES
+('Brandon', 25, 5, 'Austin', 'Purple');
+
+INSERT INTO person
+(name, age, height, city, favorite_color)
+VALUES
+('Ash', 18, 5, 'San Antonio', 'Black');
+
+SELECT * FROM person
+ORDER BY height DESC;
+
+SELECT * FROM person
+ORDER BY height ASC;
+
+SELECT * FROM person
+ORDER BY age DESC;
+
+SELECT * FROM person
+WHERE age > 20;
+
+SELECT * FROM person
+WHERE age = 20;
+
+SELECT * FROM person
+WHERE age < 20
+OR age > 30;
+
+SELECT * FROM person
+WHERE age != 27;
+
+SELECT * FROM person
+WHERE favorite_color != 'red';
+
+SELECT * FROM person
+WHERE favorite_color != 'red'
+AND favorite_color != 'blue';
+
+SELECT * FROM person
+WHERE favorite_color = 'orange'
+OR favorite_color = 'green';
+
+SELECT * FROM person
+WHERE favorite_color IN ('orange', 'green', 'blue');
+
+SELECT * FROM person
+WHERE favorite_color IN ('yellow', 'purple');
